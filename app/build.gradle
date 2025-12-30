@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 34 // Updated Compile SDK version to the latest stable
-    buildToolsVersion "34.0.0" // Updated Build Tools version to match Compile SDK
+    compileSdkVersion 35
+    buildToolsVersion "35.0.0"
 
     defaultConfig {
         applicationId "com.example.securityword"
-        minSdkVersion 21 // Retained minimum SDK version
-        targetSdkVersion 34 // Updated Target SDK version to the latest stable
+        minSdkVersion 21
+        targetSdkVersion 35
         versionCode 1
         versionName "1.0"
 
@@ -33,19 +33,12 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.10" // Updated Kotlin standard library
-    implementation 'androidx.core:core-ktx:1.12.0' // Updated Core KTX
-    implementation 'androidx.appcompat:appcompat:1.7.0' // Updated AppCompat
-    implementation 'com.google.android.material:material:1.9.0' // Updated Material Components
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4' // Retained ConstraintLayout version
-    testImplementation 'junit:junit:4.13.2' // Retained JUnit version
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5' // Updated AndroidX Test JUnit
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1' // Updated Espresso
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.5.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:2.0.0"
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 }
