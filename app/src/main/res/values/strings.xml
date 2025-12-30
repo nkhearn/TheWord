@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SecurityWord</string>
+    <string name="settings">Settings</string>
+    <string name="salt">Salt</string>
+    <string name="save">Save</string>
+    <string name="salt_saved">Salt saved</string>
+    <string name="loading">Loading...</string>
+</resources>
