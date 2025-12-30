@@ -1,0 +1,45 @@
+name: Generate Wrapper and Build APK
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Generate Wrapper and Build APK
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up JDK
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: 17
+
+      # Step 3: Install Gradle CLI (if needed)
+      - name: Install Gradle CLI
+        run: sudo apt-get update && sudo apt-get install -y gradle
+
+      # Step 4: Create Gradle Wrapper
+      - name: Create Gradle Wrapper
+        run: gradle wrapper --gradle-version 8.2.1
+
+      # Step 5: Build APK
+      - name: Build APK
+        run: ./gradlew assembleRelease
+
+      # Step 6: Upload APK to GitHub Artifacts
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-app-release-apk
+          path: app/build/outputs/apk/release/app-release.apk
