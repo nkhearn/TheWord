@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "31.0.0"
+    compileSdkVersion 34 // Updated Compile SDK version to the latest stable
+    buildToolsVersion "34.0.0" // Updated Build Tools version to match Compile SDK
 
     defaultConfig {
         applicationId "com.example.securityword"
-        minSdkVersion 21
-        targetSdkVersion 31
+        minSdkVersion 21 // Retained minimum SDK version
+        targetSdkVersion 34 // Updated Target SDK version to the latest stable
         versionCode 1
         versionName "1.0"
 
@@ -33,8 +33,15 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.10"
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.10" // Updated Kotlin standard library
+    implementation 'androidx.core:core-ktx:1.12.0' // Updated Core KTX
+    implementation 'androidx.appcompat:appcompat:1.7.0' // Updated AppCompat
+    implementation 'com.google.android.material:material:1.9.0' // Updated Material Components
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4' // Retained ConstraintLayout version
+    testImplementation 'junit:junit:4.13.2' // Retained JUnit version
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5' // Updated AndroidX Test JUnit
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1' // Updated Espresso
+}    implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
