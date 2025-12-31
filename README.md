@@ -4,7 +4,7 @@ TheWord is a simple yet effective Android application that generates a synchroni
 
 ## Project Overview
 
-The core functionality of the app revolves around generating a unique word every hour based on a user-defined "salt" (a master password). This word is derived by hashing the current time (formatted as `yyyy-MM-dd-HH`) combined with the salt using the SHA-256 algorithm. The resulting hash is then used to select a word from a predefined list, ensuring that the same word is generated across all devices using the same salt.
+The core functionality of the app revolves around generating a unique word every hour based on a user-defined "salt" (a master password). This word is derived by hashing the current time (formatted as `yyyy-MM-dd-HH`) combined with the salt using a hashing algorithm. The resulting hash is then used to select a word from a predefined list, ensuring that the same word is generated across all devices using the same salt.
 
 ## Features
 
